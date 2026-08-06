@@ -152,8 +152,32 @@ Create a **Power BI dashboard** to visualize key trends and relationships in the
 | **Python** | Primary data analysis and modeling | Pandas, Statsmodels |
 | **Excel** | Initial data exploration and validation | Data preview, basic statistics |
 | **Power BI** | Trend visualization and dashboard creation | Interactive charts, time-series plots |
-| **GitHub** | Version control and project documentation | Repository hosting, README |
+
 
 ---
 
+### II. Development (Cleaning and Visualization)
 
+#### a. Checking for Missing (Null) Values
+
+Conducted a thorough check for missing values across all datasets using Python's `isnull()` method.
+
+![Insert Image](images/missing_values.png)
+![Insert Image](images/missing_values_result.png)
+
+
+
+#### c. Checking for Duplicates
+
+Checked for duplicate entries across all datasets to ensure data integrity.
+
+**Food Truck & Restaurant Datasets:**
+- Checked `Licence No.` and `Client Name` columns
+- Standardized columns to lowercase and removed extra spaces
+- Used `duplicated()` method to identify and remove duplicates
+
+**Unemployment & Population Datasets:**
+- Scanned all columns for duplicate rows
+
+
+![Insert Image](images/duplicate_check.png)
