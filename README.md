@@ -149,20 +149,11 @@ Create a **Power BI dashboard** to visualize key trends and relationships in the
 
 | Tool | Purpose | Libraries / Features |
 |------|---------|---------------------|
-| **Python** | Primary data analysis and modeling | Pandas, NumPy, Statsmodels |
+| **Python** | Primary data analysis and modeling | Pandas, Statsmodels |
 | **Excel** | Initial data exploration and validation | Data preview, basic statistics |
 | **Power BI** | Trend visualization and dashboard creation | Interactive charts, time-series plots |
 | **GitHub** | Version control and project documentation | Repository hosting, README |
 
 ---
 
-**License Categories Extracted:**
 
-| Food Truck Licenses | Restaurant Licenses |
-|---------------------|---------------------|
-| MOTORIZED REFRESHMENT VEHICLE OWNER | EATING ESTABLISHMENT |
-| NON-MOTORIZED REFRESHMENT VEHICLE OWNER | |
-| MOBILE VENDING (FOOD TRUCK) | |
-| MOBILE VENDING (ICE CREAM TRUCK) | |
-| SIDEWALK VENDING CURBLANE VENDING | |
-| HAWKER/PEDLAR WITH MOTOR VEHICLE | |
