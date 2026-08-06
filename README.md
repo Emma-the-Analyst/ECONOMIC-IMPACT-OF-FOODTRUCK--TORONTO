@@ -28,3 +28,16 @@
      - [i. Findings Documentation and Discovery](#i-findings-documentation-and-discovery)
 3. [Recommendations](#3-recommendations)
 4. [Conclusion](#4-conclusion)
+
+
+
+
+
+
+## 1. Project Abstract
+
+This project investigates the economic relationship between food trucks and traditional restaurants in Toronto. Using 55 years of business licensing data, unemployment statistics, and population estimates, we applied econometric modeling to determine whether food trucks compete with or complement brick-and-mortar restaurants.
+
+Our findings reveal a **complementary relationship**—each additional food truck is associated with a **3.5-unit increase** in active restaurants. This challenges the common perception that food trucks threaten traditional restaurants.
+
+The analysis provides data-driven policy recommendations for the **Food Trucks Association of Canada (FTAC)** to support a balanced and thriving local food service industry.
