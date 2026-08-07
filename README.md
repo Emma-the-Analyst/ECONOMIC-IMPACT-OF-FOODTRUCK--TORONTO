@@ -156,28 +156,144 @@ Create a **Power BI dashboard** to visualize key trends and relationships in the
 
 ---
 
-### II. Development (Cleaning and Visualization)
+### II. Development (Data Exploration, Cleaning, Manipulation and Visualization)
 
 #### a. Checking for Missing (Null) Values
 
-Conducted a thorough check for missing values across all datasets using Python's `isnull()` method.
+To ensure the datasets were complete and suitable for analysis, we conducted a thorough check for missing values across all relevant columns. For the food truck and restaurant databases, our main columns of interest were the `Category` and `Client Name` columns, since these would be used to determine which licenses were active in a specific year. For both columns of interest, there were no missing values. For the population estimates dataset, no missing values were recorded. For the labour force dataset, 20 missing values were identified in the value column and were dropped.
 
 ![Insert Image](images/missing_values.png)
 ![Insert Image](images/missing_values_result.png)
 
 
 
-#### c. Checking for Duplicates
+#### b. Checking for Duplicates
 
-Checked for duplicate entries across all datasets to ensure data integrity.
-
-**Food Truck & Restaurant Datasets:**
-- Checked `Licence No.` and `Client Name` columns
-- Standardized columns to lowercase and removed extra spaces
-- Used `duplicated()` method to identify and remove duplicates
-
-**Unemployment & Population Datasets:**
-- Scanned all columns for duplicate rows
-
+To ensure the integrity of the datasets and eliminate redundant records, a thorough check for duplicate entries was conducted. For the Food Truck and Restaurant datasets, i focused specifically on the `Licence No.` and `Client Name` columns, as only licensees with unique license numbers and client names were considered valid. Using Python's Pandas library, these columns were standardized by converting them to lowercase and removing extra spaces to ensure uniformity. The `duplicated()` method to identify and remove any duplicate rows based on these two key columns. For the Labour and Population datasets, we conducted a broader check across all columns to identify duplicate rows without focusing on specific fields.
 
 ![Insert Image](images/duplicate_check.png)
+
+#### c. Outliers Check
+
+Outliers were not checked in this project since the data was to be aggregated to yearly totals. With yearly aggregation, extreme values at the individual license level are smoothed out, making outlier detection less relevant for the analysis.
+
+![Insert Image](images/outliers_check.png)
+
+
+
+
+
+
+
+
+
+#### d. Data Extraction and Categorisation
+
+To enable time series analysis and feed our intended models, we extracted yearly data summaries for our variables of interest. Following the Institute of Justice study, we extracted time series rows for these variables.
+
+To ascertain which food trucks and restaurants were active per year, we used the following inclusion criterion:
+
+*A license is considered active if it was issued on or before the year in question and it has not expired by the end of the year.*
+
+A final data table consisting of yearly data for our model was then put together. It consists of yearly Toronto data for number of food trucks and restaurants (1969–2024), unemployment rate (2006–2024), and population data (2001–2023).
+
+
+![Insert Image](images/final_data_table.png)
+
+
+#### g. Univariate Trend Analysis
+
+**Food Truck and Restaurant Trends**
+
+The analysis examined the trends in the number of active food trucks and restaurants in Toronto from 1969 to 2024. The graph reveals distinct growth patterns for both sectors. The number of food trucks showed a steady increase starting in the late 1980s, with significant growth observed between 1990 and 2004, likely driven by increased urbanization, demand for mobile dining, and changing consumer preferences. However, a notable decline occurred after 2004, suggesting potential regulatory challenges or market saturation. In contrast, restaurants experienced consistent growth until the early 2000s, stabilizing thereafter with minor fluctuations. The trend also suggests that restaurants have shown greater resilience during economic downturns, such as the COVID-19 pandemic, likely due to their established customer base, diversified service models, and access to financial support programs.
+
+![Insert Image](images/food_truck_restaurant_trends.png)
+
+**Population Trend**
+
+The population trend from 2000 to 2023 shows a steady and consistent increase, reflecting Toronto's ongoing urban growth and attraction as a metropolitan hub. This growth in population underpins the expanding demand for both food trucks and traditional restaurants, as a larger population offers a broader customer base for these businesses.
+
+![Insert Image](images/population_trend.png)
+
+**Unemployment Rate Trend**
+
+The unemployment rate trend from 2006 to 2024 displays significant fluctuations, with notable peaks around 2009 (post-2008 financial crisis) and 2020 (COVID-19 pandemic). These economic downturns likely affected consumer spending and entrepreneurial activity, which are crucial for the food service industry. Despite these challenges, the gradual recovery in unemployment rates post-2020 indicates improving economic conditions, which could favor the resurgence and growth of food-related businesses.
+
+![Insert Image](images/unemployment_trend.png)
+
+
+#### h. Visualization
+
+Visualizations were created to analyze key trends in Toronto's food service industry. The data shows 1,217 food truck exits and 19,000 restaurant exits, with 1,577 new food truck entrants and 25,000 new restaurant entrants. The total active food truck count by category reveals NON-MOTORIZED REFRESHMENT VEHICLES leading with 7.9K, followed by MOTORIZED REFRESHMENT VEHICLES at 6.6K, SIDEWALK VENDING at 3.0K, HAWKER/PEDLAR WITH MOTOR VEHICLE at 1.2K, CURBLANE VENDING at 0.6K, and MOBILE VENDING at 0.3K each. Restaurant entrants show a steady increase over time with a peak around 2000, while food truck entrants peaked around 1990 and 2000 before declining after 2004. Food truck exits remained low until the 1990s before increasing, closely following entry patterns. Restaurant exits show a steady upward trend from the 1970s through the 2010s, with a significant peak around 2015, reflecting the competitive nature of the industry.
+
+![Insert Image](images/visualization.png)
+
+
+
+### III. Analysis
+
+#### i. Findings Documentation and Discovery
+
+**Modeling**
+
+A Pooled Ordinary Least Squares (POLS) regression model was developed to analyze the relationship between food trucks and restaurants in Toronto while controlling for unemployment rate, population, and lagged restaurant count. The model was specified as follows:
+Restaurants_t = β₀ + β₁(Food Trucks_t) + β₂(Unemployment_t) + β₃(Population_t) + β₄(Restaurants_t-1) + ε_t
+
+
+The Pooled OLS method was selected due to its suitability for analyzing time series data with a single entity, in this case, the city of Toronto. The model assumes no time-invariant characteristics that could bias the results, allowing all variations in the dependent variable to be attributed to the explanatory variables included in the model.
+
+**Estimation Results**
+
+| Variable | Coefficient | P-Value | Significance |
+|----------|-------------|---------|--------------|
+| Food Trucks | 3.51 | < 0.05 | Significant |
+| Unemployment Rate | 40.37 | < 0.05 | Significant |
+| Population | 0.0019 | < 0.05 | Significant |
+| Lagged Restaurants | 0.35 | 0.1711 | Not Significant |
+
+The estimation yielded a statistically significant positive relationship between food trucks and restaurants (p < 0.05), with each additional food truck associated with a 3.51-unit increase in active restaurants. The unemployment rate showed a strong positive coefficient of 40.37, indicating that a 1% increase in unemployment is associated with an increase of 40.37 active restaurants. Population also showed a positive but smaller effect. The lagged number of restaurants was not statistically significant (p = 0.1711).
+
+**Post Estimation Tests**
+
+The Durbin-Watson test was conducted to assess the presence of autocorrelation in the residuals. The calculated statistic was 1.3648, indicating the presence of positive autocorrelation, which could affect the efficiency of the parameter estimates.
+
+**Alternative Models**
+
+Alternative models including ARIMA, Arellano-Bond, Two-Stage Least Squares (2SLS), and First Difference methods were evaluated. The ARIMA model failed to establish a direct relationship between variables. The Arellano-Bond model produced lower than expected coefficients and failed autocorrelation tests. The 2SLS approach encountered challenges in selecting the best instrumental variable. The First Difference Test produced invalid R-squared values. The Pooled OLS method emerged as the most appropriate choice for this study.
+
+
+
+## 3. Recommendations
+
+Based on the findings of this study, the following policy recommendations are proposed to support a balanced and thriving food service industry in Toronto:
+
+**1. Support Collaborative Food Ecosystems**
+
+Policies should encourage partnerships between food trucks and restaurants to maximize their collective impact. Culinary Hubs should be established in high-traffic areas such as Nathan Phillips Square and Harbourfront, where food trucks and restaurants share spaces to create vibrant dining destinations. Integrating food trucks into existing restaurant districts, such as the King Street West area, can enhance the area's appeal to both locals and tourists.
+
+**2. Foster Entrepreneurship in the Food Industry**
+
+Initiatives should be introduced to make entry into the food truck business more accessible. Programs like the City of Toronto's BusinessTO Support Centre could expand to offer specific training modules and funding options for food truck operators. Aspiring entrepreneurs could be offered micro-loans or grants to cover startup costs such as vehicle retrofitting and licensing fees. By targeting underrepresented communities, these programs could diversify Toronto's culinary offerings while driving inclusive economic growth.
+
+**3. Invest in Infrastructure for Food Services**
+
+Designated Food Truck Zones, such as those near Union Station or Harbourfront, should be developed to provide essential utilities like electricity and water while reducing congestion in high-demand areas. Drawing inspiration from successful models like Portland's food truck pods, semi-permanent food truck clusters could be introduced in emerging neighborhoods like Liberty Village or the Distillery District.
+
+**4. Encourage Innovation in Food Services**
+
+Supporting the adoption of technology can ensure the resilience of Toronto's food trucks and restaurants. Incentives should be offered for adopting delivery platforms and emerging trends like cloud kitchens. The city could partner with tech hubs in Toronto, such as MaRS Discovery District, to explore cutting-edge solutions tailored for the food service sector.
+
+**5. Simplify and Modernize Licensing Processes**
+
+Addressing barriers to entry for food trucks in Toronto is crucial. The current annual mobile vending permit fee of $6,377 should be reviewed to make the industry more accessible to small-scale entrepreneurs. An online "Fast-Track Licensing Portal" could be introduced to streamline approvals, reduce wait times, and improve transparency.
+
+
+## 4. Conclusion
+
+This study investigated the economic relationship between food trucks and traditional restaurants in Toronto using 55 years of business licensing data, unemployment statistics, and population estimates. The Pooled OLS regression analysis revealed a statistically significant positive relationship between food trucks and restaurants, with each additional food truck associated with a 3.51-unit increase in active restaurants. This finding challenges the common perception that food trucks pose a threat to traditional restaurants and instead points to a complementary relationship where both sectors thrive alongside each other.
+
+The unemployment rate also showed a strong positive correlation with restaurant activity, suggesting that economic downturns may drive entrepreneurship and demand for affordable dining options. Population growth contributed positively to restaurant counts, reinforcing the role of market size in supporting the food service industry.
+
+The analysis confirms that food trucks and restaurants are complements, not competitors. These findings provide a strong evidence base for policy reforms that support both sectors. By implementing collaborative strategies, reducing regulatory barriers, and investing in infrastructure, Toronto can position itself as a global leader in culinary diversity and innovation.
+
+![Insert Image](images/conclusion.png)
