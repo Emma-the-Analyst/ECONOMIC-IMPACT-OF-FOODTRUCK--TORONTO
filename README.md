@@ -249,6 +249,9 @@ Restaurants_t = β₀ + β₁(Food Trucks_t) + β₂(Unemployment_t) + β₃(Pop
 
 The Pooled OLS method was selected due to its suitability for analyzing time series data with a single entity, in this case, the city of Toronto. The model assumes no time-invariant characteristics that could bias the results, allowing all variations in the dependent variable to be attributed to the explanatory variables included in the model.
 
+
+![Insert Image](https://github.com/Emma-the-Analyst/ECONOMIC-IMPACT-OF-FOODTRUCK--TORONTO/blob/main/IMAGES/POOLED%20OLS%20ESTIMATE.png?raw=true
+)
 **Estimation Results**
 
 | Variable | Coefficient | P-Value | Significance |
