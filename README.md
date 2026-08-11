@@ -177,7 +177,6 @@ To ensure the integrity of the datasets and eliminate redundant records, a thoro
 
 Outliers were not checked in this project since the data was to be aggregated to yearly totals. With yearly aggregation, extreme values at the individual license level are smoothed out, making outlier detection less relevant for the analysis.
 
-![Insert Image](images/outliers_check.png)
 
 
 
@@ -198,8 +197,9 @@ To ascertain which food trucks and restaurants were active per year, we used the
 A final data table consisting of yearly data for our model was then put together. It consists of yearly Toronto data for number of food trucks and restaurants (1969–2024), unemployment rate (2006–2024), and population data (2001–2023).
 
 
-![Insert Image](images/final_data_table.png)
+![Insert Image](https://github.com/Emma-the-Analyst/ECONOMIC-IMPACT-OF-FOODTRUCK--TORONTO/blob/main/IMAGES/FINDING%20ACTIVE%20FOOD%20TRUCK%20AND%20RESTAURANT.png?raw=true)
 
+![Insert Image](https://github.com/Emma-the-Analyst/ECONOMIC-IMPACT-OF-FOODTRUCK--TORONTO/blob/main/IMAGES/FINDING%20ACTIVE%20FOOD%20TRUCK%20AND%20RESTAURANT.png?raw=true)
 
 #### e. Univariate Trend Analysis
 
