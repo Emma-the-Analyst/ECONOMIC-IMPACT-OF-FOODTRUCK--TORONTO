@@ -207,7 +207,7 @@ A final data table consisting of yearly data for our model was then put together
 
 The analysis examined the trends in the number of active food trucks and restaurants in Toronto from 1969 to 2024. The graph reveals distinct growth patterns for both sectors. The number of food trucks showed a steady increase starting in the late 1980s, with significant growth observed between 1990 and 2004, likely driven by increased urbanization, demand for mobile dining, and changing consumer preferences. However, a notable decline occurred after 2004, suggesting potential regulatory challenges or market saturation. In contrast, restaurants experienced consistent growth until the early 2000s, stabilizing thereafter with minor fluctuations. The trend also suggests that restaurants have shown greater resilience during economic downturns, such as the COVID-19 pandemic, likely due to their established customer base, diversified service models, and access to financial support programs.
 
-![Insert Image](images/food_truck_restaurant_trends.png)
+![Insert Image](https://github.com/Emma-the-Analyst/ECONOMIC-IMPACT-OF-FOODTRUCK--TORONTO/blob/main/IMAGES/TREND%20ANALYSIS%20FOR%20FOODTRUCK%20AND%20RESTAURANT.png?raw=true)
 
 **Population Trend**
 
