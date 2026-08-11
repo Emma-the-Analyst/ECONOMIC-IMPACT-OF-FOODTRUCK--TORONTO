@@ -226,7 +226,7 @@ The unemployment rate trend from 2006 to 2024 displays significant fluctuations,
 
 Correlation analysis was conducted to examine the relationships between key variables using scatter plots and trend lines, with R-squared values quantifying the strength of the relationships. The scatter plot reveals a positive relationship between the number of active food trucks and restaurants, with an R-squared value of 0.628, suggesting a complementary relationship rather than direct competition. The correlation between unemployment rate and food trucks is weak, with an R-squared value of 0.013, indicating that other factors likely play a larger role in determining food truck activity. Similarly, the relationship between unemployment and restaurants is very weak at 0.021, highlighting the resilience of established restaurants during economic downturns. The correlation between population and food trucks is also weak at 0.186, suggesting that food trucks may concentrate in areas with higher tourism or business activity rather than purely residential areas.
 
-![Insert Image](images/correlation_analysis.png)
+![Insert Image](https://github.com/Emma-the-Analyst/ECONOMIC-IMPACT-OF-FOODTRUCK--TORONTO/blob/main/IMAGES/CORRELATION%20ANALYSIS.png?raw=true)
 
 
 #### g. Visualization
