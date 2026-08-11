@@ -219,7 +219,7 @@ The population trend from 2000 to 2023 shows a steady and consistent increase, r
 
 The unemployment rate trend from 2006 to 2024 displays significant fluctuations, with notable peaks around 2009 (post-2008 financial crisis) and 2020 (COVID-19 pandemic). These economic downturns likely affected consumer spending and entrepreneurial activity, which are crucial for the food service industry. Despite these challenges, the gradual recovery in unemployment rates post-2020 indicates improving economic conditions, which could favor the resurgence and growth of food-related businesses.
 
-![Insert Image](images/unemployment_trend.png)
+![Insert Image](https://github.com/Emma-the-Analyst/ECONOMIC-IMPACT-OF-FOODTRUCK--TORONTO/blob/main/IMAGES/UNEMPLOYMENT%20RATE%20TREND.png?raw=true)
 
 
 #### f. Visualization
