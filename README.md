@@ -171,7 +171,7 @@ To ensure the datasets were complete and suitable for analysis, we conducted a t
 
 To ensure the integrity of the datasets and eliminate redundant records, a thorough check for duplicate entries was conducted. For the Food Truck and Restaurant datasets, i focused specifically on the `Licence No.` and `Client Name` columns, as only licensees with unique license numbers and client names were considered valid. Using Python's Pandas library, these columns were standardized by converting them to lowercase and removing extra spaces to ensure uniformity. The `duplicated()` method to identify and remove any duplicate rows based on these two key columns. For the Labour and Population datasets, we conducted a broader check across all columns to identify duplicate rows without focusing on specific fields.
 
-![Insert Image](images/duplicate_check.png)
+![Insert Image](https://github.com/Emma-the-Analyst/ECONOMIC-IMPACT-OF-FOODTRUCK--TORONTO/blob/main/IMAGES/DUPLICATE%20CHECK.png?raw=true)
 
 #### c. Outliers Check
 
