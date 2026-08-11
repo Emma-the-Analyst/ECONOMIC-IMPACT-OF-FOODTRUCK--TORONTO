@@ -162,7 +162,7 @@ Create a **Power BI dashboard** to visualize key trends and relationships in the
 
 To ensure the datasets were complete and suitable for analysis, we conducted a thorough check for missing values across all relevant columns. For the food truck and restaurant databases, our main columns of interest were the `Category` and `Client Name` columns, since these would be used to determine which licenses were active in a specific year. For both columns of interest, there were no missing values. For the population estimates dataset, no missing values were recorded. For the labour force dataset, 20 missing values were identified in the value column and were dropped.
 
-![Insert Image](images/missing_values.png)
+![Insert Image](https://github.com/Emma-the-Analyst/ECONOMIC-IMPACT-OF-FOODTRUCK--TORONTO/blob/main/IMAGES/MISSING%20VALUE.png?raw=true)
 ![Insert Image](images/missing_values_result.png)
 
 
