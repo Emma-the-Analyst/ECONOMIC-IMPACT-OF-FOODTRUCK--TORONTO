@@ -252,6 +252,9 @@ The Pooled OLS method was selected due to its suitability for analyzing time ser
 
 ![Insert Image](https://github.com/Emma-the-Analyst/ECONOMIC-IMPACT-OF-FOODTRUCK--TORONTO/blob/main/IMAGES/POOLED%20OLS%20ESTIMATE.png?raw=true
 )
+
+
+
 **Estimation Results**
 
 | Variable | Coefficient | P-Value | Significance |
