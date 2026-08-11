@@ -199,7 +199,7 @@ A final data table consisting of yearly data for our model was then put together
 
 ![Insert Image](https://github.com/Emma-the-Analyst/ECONOMIC-IMPACT-OF-FOODTRUCK--TORONTO/blob/main/IMAGES/FINDING%20ACTIVE%20FOOD%20TRUCK%20AND%20RESTAURANT.png?raw=true)
 
-![Insert Image](https://github.com/Emma-the-Analyst/ECONOMIC-IMPACT-OF-FOODTRUCK--TORONTO/blob/main/IMAGES/FINDING%20ACTIVE%20FOOD%20TRUCK%20AND%20RESTAURANT.png?raw=true)
+![Insert Image](https://github.com/Emma-the-Analyst/ECONOMIC-IMPACT-OF-FOODTRUCK--TORONTO/blob/main/IMAGES/ACTIVE%20FOODTRUCK%20AND%20RESTAURANT%20RESULT.png?raw=true)
 
 #### e. Univariate Trend Analysis
 
