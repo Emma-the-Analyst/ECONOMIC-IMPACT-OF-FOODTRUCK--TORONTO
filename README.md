@@ -201,7 +201,7 @@ A final data table consisting of yearly data for our model was then put together
 ![Insert Image](images/final_data_table.png)
 
 
-#### g. Univariate Trend Analysis
+#### e. Univariate Trend Analysis
 
 **Food Truck and Restaurant Trends**
 
@@ -222,7 +222,7 @@ The unemployment rate trend from 2006 to 2024 displays significant fluctuations,
 ![Insert Image](images/unemployment_trend.png)
 
 
-#### h. Visualization
+#### f. Visualization
 
 Visualizations were created to analyze key trends in Toronto's food service industry. The data shows 1,217 food truck exits and 19,000 restaurant exits, with 1,577 new food truck entrants and 25,000 new restaurant entrants. The total active food truck count by category reveals NON-MOTORIZED REFRESHMENT VEHICLES leading with 7.9K, followed by MOTORIZED REFRESHMENT VEHICLES at 6.6K, SIDEWALK VENDING at 3.0K, HAWKER/PEDLAR WITH MOTOR VEHICLE at 1.2K, CURBLANE VENDING at 0.6K, and MOBILE VENDING at 0.3K each. Restaurant entrants show a steady increase over time with a peak around 2000, while food truck entrants peaked around 1990 and 2000 before declining after 2004. Food truck exits remained low until the 1990s before increasing, closely following entry patterns. Restaurant exits show a steady upward trend from the 1970s through the 2010s, with a significant peak around 2015, reflecting the competitive nature of the industry.
 
