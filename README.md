@@ -213,7 +213,7 @@ The analysis examined the trends in the number of active food trucks and restaur
 
 The population trend from 2000 to 2023 shows a steady and consistent increase, reflecting Toronto's ongoing urban growth and attraction as a metropolitan hub. This growth in population underpins the expanding demand for both food trucks and traditional restaurants, as a larger population offers a broader customer base for these businesses.
 
-![Insert Image](images/population_trend.png)
+![Insert Image](https://github.com/Emma-the-Analyst/ECONOMIC-IMPACT-OF-FOODTRUCK--TORONTO/blob/main/IMAGES/POPULATION%20TREND.png?raw=true)
 
 **Unemployment Rate Trend**
 
