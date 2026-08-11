@@ -222,6 +222,13 @@ The unemployment rate trend from 2006 to 2024 displays significant fluctuations,
 ![Insert Image](https://github.com/Emma-the-Analyst/ECONOMIC-IMPACT-OF-FOODTRUCK--TORONTO/blob/main/IMAGES/UNEMPLOYMENT%20RATE%20TREND.png?raw=true)
 
 
+#### i. Correlation Analysis
+
+Correlation analysis was conducted to examine the relationships between key variables using scatter plots and trend lines, with R-squared values quantifying the strength of the relationships. The scatter plot reveals a positive relationship between the number of active food trucks and restaurants, with an R-squared value of 0.628, suggesting a complementary relationship rather than direct competition. The correlation between unemployment rate and food trucks is weak, with an R-squared value of 0.013, indicating that other factors likely play a larger role in determining food truck activity. Similarly, the relationship between unemployment and restaurants is very weak at 0.021, highlighting the resilience of established restaurants during economic downturns. The correlation between population and food trucks is also weak at 0.186, suggesting that food trucks may concentrate in areas with higher tourism or business activity rather than purely residential areas.
+
+![Insert Image](images/correlation_analysis.png)
+
+
 #### g. Visualization
 
 Visualizations were created to analyze key trends in Toronto's food service industry. The data shows 1,217 food truck exits and 19,000 restaurant exits, with 1,577 new food truck entrants and 25,000 new restaurant entrants. The total active food truck count by category reveals NON-MOTORIZED REFRESHMENT VEHICLES leading with 7.9K, followed by MOTORIZED REFRESHMENT VEHICLES at 6.6K, SIDEWALK VENDING at 3.0K, HAWKER/PEDLAR WITH MOTOR VEHICLE at 1.2K, CURBLANE VENDING at 0.6K, and MOBILE VENDING at 0.3K each. Restaurant entrants show a steady increase over time with a peak around 2000, while food truck entrants peaked around 1990 and 2000 before declining after 2004. Food truck exits remained low until the 1990s before increasing, closely following entry patterns. Restaurant exits show a steady upward trend from the 1970s through the 2010s, with a significant peak around 2015, reflecting the competitive nature of the industry.
